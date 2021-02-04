@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>Casker Main</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:domain" content="">
+
+    <!-- LOAD JQUERY LIBRARY -->
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+
+    <!-- font cdn -->
+    <link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" property="stylesheet"
+        type="text/css" media="all">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/response.css" />
+    <link rel="stylesheet" type="text/css" href="css/animation.css" />
+</head>
+
+<body>
+    <section id="wrap">
+        <!-- <header id="test-header" class="test-header"></header> -->
+        <div w3-include-html="include/test-header.html"></div>
+
+        <section id="container">
+
+            <!-- text -->
+            <div class="text-area pd90">
+                <p class="tit tit-second stagger-item">vol. 4</p>
+                <p class="tit stagger-item">Classics<span class="line"></span></p>
+                <p class="tit stagger-item">Never</p>
+                <p class="tit stagger-item">Get old</p>
+                <p class="desc  stagger-item">We'll make a mobile magazine using html, css only</p>
+            </div>
+
+            <!-- circle -->
+            <ul class="wrap-circle">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <!-- badge -->
+            <div class="badge-yellow">Ex- <br>clusive</div>
+
+            <div class="test"></div>
+
+        </section>
+
+        <footer id="footer" w3-include-html="include/nav.html"></footer>
+
+        <!-- <footer id="footer">
+            <nav class="gnb">
+                <a href="index.html" class="cover effect-mouse active"><img src="img/icon/cover.svg" alt=""></a>
+                <a href="issue.html" class="issue effect-mouse"><img src="img/icon/issue.svg" alt=""></a>
+                <a href="like.html" class="like effect-mouse"><img src="img/icon/like.svg" alt=""></a>
+                <a href="my.html" class="my effect-mouse"><img src="img/icon/more.svg" alt=""></a>
+            </nav>
+        </footer> -->
+
+    </section>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>

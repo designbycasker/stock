@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe, h1,  h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, 
+details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, 
+video, button, input, textarea, select, option{margin:0;padding:0;border:0;font-size:100%;font-family:"Apple SD Gothic NEO", "Apple Gothic", MalgunGothic, "Malgun Gothic", 'Noto Sans KR', '돋움', 'dotum', tahoma, 'MalgunGothic', sans-serif;box-sizing:border-box;vertical-align:middle}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, textarea{display:block}
+body{position:relative;line-height:1;-webkit-text-size-adjust:100%}
+
+ol, ul{list-style:none}
+/* ol:after, ul:after{content:'';display:block;clear:both} */
+
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after, q:before, q:after{content:'';content:none}
+
+img{vertical-align:top}
+em{font-style:normal}
+a{text-decoration:none}
+button{padding:0;margin:0;border:0;background:none;cursor:pointer}
+
+table{table-layout:fixed;width:100%;border-collapse:collapse;border-spacing:0;word-break:break-all}
+caption{overflow:hidden;width:0;height:0;font-size:0;text-indent:-9999em}
+
+.blind, legend{overflow:hidden;position:absolute;top:-9999em;left:-9999em;width:0;height:0;font-size:0;margin:0;padding:0;text-indent:-9999em}
+
+html, body {width: 100%; height: 100%;}
+
+/* Margin N Padding */
+.mt90 {margin-top: 90px !important;}
+.mt120 {margin-top: 120px !important;}
+
+.pd90 {padding-top: 90px !important;}
+
+
+/* Custom Style */
+input {background-color: rgba(255, 255, 255, 0.08); height: 40px; line-height: 40px; border-radius: 8px;}
+button {font-size: 15px; color: #ffe6cf; line-height: 40px;}
