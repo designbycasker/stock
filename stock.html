@@ -31,21 +31,37 @@
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/stock.css" />
     <link rel="stylesheet" type="text/css" href="css/response.css" />
     <link rel="stylesheet" type="text/css" href="css/animation.css" />
 </head>
 
 <body>
-    <section id="wrap">
+    <section id="wrap_stock">
 
-        <p class="title_stock">Code Stock</p>
-        <p class="desc_stock">That is a collection of works I made while studying code.</p>
+        <div class="wrap_stockTit">
+            <p class="title_stock">Code Stock</p>
+            <p class="desc_stock">That is a collection of works I made while studying code.</p>
+        </div>
 
-        <ul class="list_stock">
-            <li>
-                <!-- <canvas class="myCanvas" width="800" height="600"></canvas> -->
-                <div w3-include-html="work/0204_cvs_01.html"></div>
+        <ul class="list_stock clearfix">
+            <li class="left">
+                <!-- Canvas Study 04, Image -->
+                <canvas class="canvas_04" width="1600" height="1200"></canvas>
+            </li>
+            <li class="left">
+                <!-- Canvas Study 03, Image -->
+                <canvas class="canvas_03" width="1600" height="1200"></canvas>
+            </li>
+            <li class="left">
+                <!-- Canvas Study 02, requestAnimationFrame -->
+                <canvas class="canvas_02" width="1600" height="1200"></canvas>
+            </li>
+
+            <li class="left">
+                <!-- Canvas Study 01 -->
+                <canvas class="myCanvas" width="1600" height="1200"></canvas>
+                <!-- <div w3-include-html="work/0204_cvs_01.html"></div> -->
             </li>
         </ul>
 
