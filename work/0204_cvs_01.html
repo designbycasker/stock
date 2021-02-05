@@ -1,0 +1,33 @@
+<canvas class="myCanvas" width="800" height="600"></canvas>
+<script>
+    function 라디안(각도) {
+        return 각도 * Math.PI / 180;
+    }
+
+    const gogo = document.querySelector('.myCanvas');
+    const txt = gogo.getContext('2d');
+
+    // 사각형
+    txt.fillStyle = 'blue';
+    txt.fillRect(10, 10, 100, 100);
+    txt.fillStyle = '#ff0000';
+    txt.fillRect(200, 120, 200, 100);
+
+    // 삼각형
+    txt.fillStyle = 'aqua';
+    txt.beginPath();
+    txt.moveTo(300, 300);
+    txt.lineTo(400, 420);
+    txt.lineTo(200, 320);
+    txt.lineTo(300, 300);
+    txt.stroke();
+    txt.fill();
+    txt.closePath(); //굳이 안해줘도 됨, 밑에서 새로 시작하므로
+
+    // 원
+    txt.beginPath();
+    txt.fillStyle = 'tomato';
+    txt.arc(100, 500, 50, 0, 라디안(360), false);
+    txt.fill();
+    txt.closePath();
+</script>
