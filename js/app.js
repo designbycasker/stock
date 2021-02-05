@@ -52,7 +52,8 @@ const canvas03 = document.querySelector('.canvas_03');
 const context03 = canvas03.getContext('2d');
 
 const imgElem = new Image();
-imgElem.src = '../img/issue-1.jpg';
+// imgElem.src = '../img/issue-1.jpg';
+imgElem.src = 'https://designbycasker.github.io/stock/img/issue-1.jpg';
 imgElem.addEventListener('load', () => {
     context03.drawImage(imgElem, 50, 50);
 })
