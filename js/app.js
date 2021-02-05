@@ -33,15 +33,36 @@ function includeHTML() {
 // 캔버스 04 - 210205
 const canvas04 = document.querySelector('.canvas_04');
 const context04 = canvas04.getContext('2d');
+const control = document.querySelector('.control');
+let drawMode = false;
+let colorVal = 'black';
 
-function clickHandler(e) {
-    console.log(e.layerY);
+function downHandler() {
+    drawMode = true;
+}
+function upHandler() {
+    drawMode = false;
+}
+
+function setColor(e) {
+    // console.log(e.target.getAttribute('data-color'));
+    colorVal = e.target.getAttribute('data-color');
+    context04.fillStyle = colorVal;
+}
+
+function moveHandler(e) {
+    if (!drawMode) return;
+
+    // console.log(e.layerY);
     context04.beginPath();
-    context04.arc(e.layerX * 4, e.layerY * 4, 40, 0, Math.PI * 2, true);
+    context04.arc(e.layerX * 1, e.layerY * 1, 4, 0, Math.PI * 2, true);
     context04.fill();
 }
 
-canvas04.addEventListener('click', clickHandler);
+canvas04.addEventListener('mousemove', moveHandler);
+canvas04.addEventListener('mousedown', downHandler);
+canvas04.addEventListener('mouseup', upHandler);
+control.addEventListener('click', setColor);
 
 
 // ---------------------------------------------------------------------------------------------------
