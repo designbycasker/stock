@@ -26,6 +26,22 @@ function includeHTML() {
         }
     }
 }
+// ---------------------------------------------------------------------------------------------------
+
+
+// 캔버스 05 - 210208 - transform
+
+const canvas05 = document.querySelector('.canvas_05');
+const context05 = canvas05.getContext('2d');
+
+context05.font = '60px Apple SD Gothic NEO';
+context05.textAlign = 'center';
+context05.fillText('Transform', 800, 600);
+
+context05.fillRect(100, 100, 400, 400);
+context05.fillStyle = 'tomato';
+context05.fillRect(200, 200, 400, 400);
+
 
 // ---------------------------------------------------------------------------------------------------
 
