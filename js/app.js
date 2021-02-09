@@ -158,21 +158,21 @@ ctx01.fillRect(0, 0, canvas01.width, canvas01.height);
 ctx01.beginPath();
 ctx01.fillStyle = '#43FF50';
 ctx01.globalCompositeOperation = 'screen';
-ctx01.arc(760, 525, 80, 0, 라디안(360), false);
+ctx01.arc(740, 480, 120, 0, 라디안(360), false);
 ctx01.fill();
 ctx01.closePath();
 
 ctx01.beginPath();
 ctx01.fillStyle = '#2C78FF';
 ctx01.globalCompositeOperation = 'screen';
-ctx01.arc(720, 596, 80, 0, 라디안(360), false);
+ctx01.arc(680, 600, 120, 0, 라디안(360), false);
 ctx01.fill();
 ctx01.closePath();
 
 ctx01.beginPath();
 ctx01.fillStyle = '#FF4343';
 ctx01.globalCompositeOperation = 'screen';
-ctx01.arc(800, 596, 80, 0, 라디안(360), false);
+ctx01.arc(800, 600, 120, 0, 라디안(360), false);
 ctx01.fill();
 ctx01.closePath();
 
