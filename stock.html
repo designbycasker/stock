@@ -2,7 +2,7 @@
 <html lang="ko">
 
 <head>
-    <title>Notitle</title>
+    <title>Code Stock</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -41,15 +41,24 @@
 
         <div class="wrap_stockTit">
             <p class="title_stock">Code Stock</p>
-            <p class="desc_stock">That is a collection of works I made while studying code.</p>
+            <p class="desc_stock">That is a collection of works I made while studying code and Prototype.</p>
+
+            <ul class="tab_skill">
+                <!-- <li class="item">All</li> -->
+                <li class="item">Framer</li>
+                <li class="item">Protopie</li>
+                <li class="item">css, js</li>
+                <li class="item">Canvas</li>
+                <li class="item">After Effect</li>
+            </ul>
         </div>
 
-        <ul class="list_stock clearfix">
-            <li class="left">
+        <ul class="list_stock">
+            <li class="item">
                 <!-- Canvas Study 05, transform -->
                 <canvas class="canvas_05" width="1600" height="1200"></canvas>
             </li>
-            <li class="left drawMode">
+            <li class="item drawMode">
                 <div class="control">
                     <button class="btn-color" data-color="black"></button>
                     <button class="btn-color" data-color="red"></button>
@@ -57,23 +66,30 @@
                     <button class="btn-color" data-color="green"></button>
                 </div>
                 <!-- Canvas Study 04, Image -->
-                <canvas class="canvas_04" width="400" height="300"></canvas>
+                <canvas class="canvas_04" width="600" height="450"></canvas>
             </li>
-            <li class="left">
+            <li class="item">
                 <!-- Canvas Study 03, Image -->
                 <canvas class="canvas_03" width="1600" height="1200"></canvas>
             </li>
-            <li class="left">
+            <li class="item">
                 <!-- Canvas Study 02, requestAnimationFrame -->
                 <canvas class="canvas_02" width="1600" height="1200"></canvas>
             </li>
 
-            <li class="left">
+            <li class="item">
                 <!-- Canvas Study 01 -->
                 <canvas class="myCanvas" width="1600" height="1200"></canvas>
+                <div class="tag_tool">Canvas</div>
+                <div class="wrap_info">
+                    <p class="title">Make Shape</p>
+                    <p class="decs">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
                 <!-- <div w3-include-html="work/0204_cvs_01.html"></div> -->
             </li>
         </ul>
+
+        <footer class="foot_stock">ⓒ Casker 2021 All Rights Reserved</footer>
 
     </section>
     <script type="text/javascript" src="js/app.js"></script>

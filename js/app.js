@@ -146,29 +146,82 @@ function 라디안(각도) {
     return 각도 * Math.PI / 180;
 }
 
-const gogo = document.querySelector('.myCanvas');
-const txt = gogo.getContext('2d');
+const canvas01 = document.querySelector('.myCanvas');
+const ctx01 = canvas01.getContext('2d');
 
-// 사각형
-txt.fillStyle = 'blue';
-txt.fillRect(10, 10, 100, 100);
-txt.fillStyle = '#ff0000';
-txt.fillRect(200, 120, 200, 100);
-
-// 삼각형
-txt.fillStyle = 'aqua';
-txt.beginPath();
-txt.moveTo(300, 300);
-txt.lineTo(400, 420);
-txt.lineTo(200, 320);
-txt.lineTo(300, 300);
-txt.stroke();
-txt.fill();
-txt.closePath(); //굳이 안해줘도 됨, 밑에서 새로 시작하므로
+// 스크린을 위한 배경 생성
+ctx01.fillStyle = '#3a3a3a';
+ctx01.globalCompositeOperation = 'multiply';
+ctx01.fillRect(0, 0, canvas01.width, canvas01.height);
 
 // 원
-txt.beginPath();
-txt.fillStyle = 'tomato';
-txt.arc(100, 500, 50, 0, 라디안(360), false);
-txt.fill();
-txt.closePath();
+ctx01.beginPath();
+ctx01.fillStyle = '#43FF50';
+ctx01.globalCompositeOperation = 'screen';
+ctx01.arc(760, 525, 80, 0, 라디안(360), false);
+ctx01.fill();
+ctx01.closePath();
+
+ctx01.beginPath();
+ctx01.fillStyle = '#2C78FF';
+ctx01.globalCompositeOperation = 'screen';
+ctx01.arc(720, 596, 80, 0, 라디안(360), false);
+ctx01.fill();
+ctx01.closePath();
+
+ctx01.beginPath();
+ctx01.fillStyle = '#FF4343';
+ctx01.globalCompositeOperation = 'screen';
+ctx01.arc(800, 596, 80, 0, 라디안(360), false);
+ctx01.fill();
+ctx01.closePath();
+
+// 삼각형
+ctx01.fillStyle = 'white';
+ctx01.beginPath();
+ctx01.moveTo(607, 474);
+ctx01.lineTo(617, 514);
+ctx01.lineTo(588, 507);
+ctx01.lineTo(607, 474);
+// ctx01.stroke();
+ctx01.fill();
+ctx01.closePath(); //굳이 안해줘도 됨, 밑에서 새로 시작하므로
+
+// 사각형
+// ctx01.beginPath();
+// ctx01.strokeRect(10, 10, 100, 100);
+// ctx01.stroke();
+
+
+// 캔버스 01 - 210204
+// function 라디안(각도) {
+//     return 각도 * Math.PI / 180;
+// }
+
+// const gogo = document.querySelector('.myCanvas');
+// const txt = gogo.getContext('2d');
+
+// // 사각형
+// txt.fillStyle = 'blue';
+// txt.globalCompositeOperation = 'multiply';
+// txt.fillRect(10, 10, 100, 100);
+// txt.fillStyle = '#ff0000';
+// txt.fillRect(200, 120, 200, 100);
+
+// // 삼각형
+// txt.fillStyle = 'aqua';
+// txt.beginPath();
+// txt.moveTo(300, 300);
+// txt.lineTo(400, 420);
+// txt.lineTo(200, 320);
+// txt.lineTo(300, 300);
+// txt.stroke();
+// txt.fill();
+// txt.closePath(); //굳이 안해줘도 됨, 밑에서 새로 시작하므로
+
+// // 원
+// txt.beginPath();
+// txt.fillStyle = 'tomato';
+// txt.arc(100, 500, 50, 0, 라디안(360), false);
+// txt.fill();
+// txt.closePath();
