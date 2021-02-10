@@ -29,6 +29,28 @@ function includeHTML() {
 // ---------------------------------------------------------------------------------------------------
 
 
+// 캔버스 06 - 210210 - video & woot animation
+
+const canvas_woot = document.querySelector('.canvas_woot');
+const ctx_woot = canvas_woot.getContext('2d');
+
+ctx_woot.fillStyle = "#3a3a3a";
+ctx_woot.fillRect(0, 0, 1600, 1200);
+
+ctx_woot.fillStyle = "#F3D9BA";
+ctx_woot.font = '40px Spoqa Han Sans Neo';
+ctx_woot.textAlign = 'center';
+ctx_woot.fillText('비디오 로딩 중', 800, 600);
+
+const videoElem = document.querySelector('.video_woot');
+videoElem.addEventListener('canplaythrough', render);
+
+function render() {
+    ctx_woot.drawImage(videoElem, -267, 0, 2133.33, 1200);
+    requestAnimationFrame(render);
+}
+
+
 // 캔버스 05 - 210208 - transform
 
 const canvas05 = document.querySelector('.canvas_05');
@@ -107,29 +129,46 @@ let xPos = 80;
 let count = 0;
 
 function draw() {
-    if (count % 10 === 0) {
+    if (count % 2 === 0) {
         context02.clearRect(0, 0, 1600, canvas02.height);
         context02.beginPath();
         context02.arc(xPos, 580, 40, 0, Math.PI * 2, false);
-        context02.fill();
-        xPos += 32;
+        context02.stroke();
+        // context02.fill();
+        xPos += 40;
     }
-
-    // 애니메이션 멈춤 01
-    // if (xPos >= canvas02.width - 20) {
-    //     return;
-    // }
 
     count++;
     timerId = requestAnimationFrame(draw);
     // setInterval(draw, 500);
 
     // 애니메이션 멈춤 02
-    if (xPos >= canvas02.width - 20) {
-        cancelAnimationFrame(timerId);
+    if (xPos >= canvas02.width - 80) {
+        cancelAnimationFrame(timerId); // or return;
+        drawReverse();
     }
-
 }
+
+function drawReverse() {
+    if (count % 2 === 0) {
+        context02.clearRect(0, 0, 1600, canvas02.height);
+        context02.beginPath();
+        context02.arc(xPos, 580, 40, 0, Math.PI * 2, false);
+        context02.stroke();
+        // context02.fill();
+        xPos -= 40;
+    }
+    count++;
+    timerId = requestAnimationFrame(drawReverse);
+
+    if (xPos <= 80) {
+        cancelAnimationFrame(timerId);
+        draw();
+    }
+}
+
+context02.strokeStyle = '#ffffff';
+context02.lineWidth = 2;
 draw();
 
 //클릭 시 멈춤
@@ -146,7 +185,7 @@ function 라디안(각도) {
     return 각도 * Math.PI / 180;
 }
 
-const canvas01 = document.querySelector('.myCanvas');
+const canvas01 = document.querySelector('.canvas_01');
 const ctx01 = canvas01.getContext('2d');
 
 // 스크린을 위한 배경 생성
@@ -158,70 +197,46 @@ ctx01.fillRect(0, 0, canvas01.width, canvas01.height);
 ctx01.beginPath();
 ctx01.fillStyle = '#43FF50';
 ctx01.globalCompositeOperation = 'screen';
-ctx01.arc(740, 480, 120, 0, 라디안(360), false);
+ctx01.arc(800, 540, 120, 0, 라디안(360), false);
 ctx01.fill();
 ctx01.closePath();
 
 ctx01.beginPath();
 ctx01.fillStyle = '#2C78FF';
 ctx01.globalCompositeOperation = 'screen';
-ctx01.arc(680, 600, 120, 0, 라디안(360), false);
+ctx01.arc(740, 660, 120, 0, 라디안(360), false);
 ctx01.fill();
 ctx01.closePath();
 
 ctx01.beginPath();
 ctx01.fillStyle = '#FF4343';
 ctx01.globalCompositeOperation = 'screen';
-ctx01.arc(800, 600, 120, 0, 라디안(360), false);
+ctx01.arc(860, 660, 120, 0, 라디안(360), false);
 ctx01.fill();
 ctx01.closePath();
 
 // 삼각형
-ctx01.fillStyle = 'white';
+ctx01.strokeStyle = 'white';
 ctx01.beginPath();
-ctx01.moveTo(607, 474);
-ctx01.lineTo(617, 514);
-ctx01.lineTo(588, 507);
-ctx01.lineTo(607, 474);
-// ctx01.stroke();
-ctx01.fill();
-ctx01.closePath(); //굳이 안해줘도 됨, 밑에서 새로 시작하므로
+ctx01.moveTo(516, 467);
+ctx01.lineTo(529, 494);
+ctx01.lineTo(500, 487);
+ctx01.lineTo(516, 467);
+ctx01.lineWidth = 2;
+ctx01.stroke();
+// ctx01.closePath(); //굳이 안해줘도 됌, 밑에서 새로 시작하므로
 
-// 사각형
-// ctx01.beginPath();
-// ctx01.strokeRect(10, 10, 100, 100);
-// ctx01.stroke();
+// 라인
+ctx01.strokeStyle = 'white';
+ctx01.beginPath();
+ctx01.moveTo(1068, 557);
+ctx01.lineTo(1106, 524);
+ctx01.lineWidth = 2;
+ctx01.stroke();
 
-
-// 캔버스 01 - 210204
-// function 라디안(각도) {
-//     return 각도 * Math.PI / 180;
-// }
-
-// const gogo = document.querySelector('.myCanvas');
-// const txt = gogo.getContext('2d');
-
-// // 사각형
-// txt.fillStyle = 'blue';
-// txt.globalCompositeOperation = 'multiply';
-// txt.fillRect(10, 10, 100, 100);
-// txt.fillStyle = '#ff0000';
-// txt.fillRect(200, 120, 200, 100);
-
-// // 삼각형
-// txt.fillStyle = 'aqua';
-// txt.beginPath();
-// txt.moveTo(300, 300);
-// txt.lineTo(400, 420);
-// txt.lineTo(200, 320);
-// txt.lineTo(300, 300);
-// txt.stroke();
-// txt.fill();
-// txt.closePath(); //굳이 안해줘도 됨, 밑에서 새로 시작하므로
-
-// // 원
-// txt.beginPath();
-// txt.fillStyle = 'tomato';
-// txt.arc(100, 500, 50, 0, 라디안(360), false);
-// txt.fill();
-// txt.closePath();
+//사각형
+ctx01.strokeStyle = 'white';
+ctx01.translate(945, 840);
+ctx01.rotate(라디안(15));
+ctx01.translate(-945, -840);
+ctx01.strokeRect(945, 840, 28, 28);
